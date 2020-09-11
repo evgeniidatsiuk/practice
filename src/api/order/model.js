@@ -18,9 +18,7 @@ const orderSchema = new Schema({
   description: {
     type: String
   },
-  products: {
-    type: [{ id: { type: Schema.ObjectId, ref: 'Product' }, count: { type: Number } }]
-  }
+  products: [{ id: { type: Schema.ObjectId, ref: 'Product' }, count: { type: Number } }]
 }, {
   timestamps: true,
   toJSON: {
